@@ -62,6 +62,8 @@ To Learn using ESP-IDF (Espressif IoT Development Framework) to programming ESP3
 ```bash
 # put this line in platformio.ini :
 monitor_speed = 115200 
+# to fix could not open port /dev/ttyUSB0: [Errno 13] Permission denied: '/dev/ttyUSB0', open terminal and write:
+sudo chmod a+rw /dev/ttyUSB0
 ```
 
 ### If you need any help or information:
