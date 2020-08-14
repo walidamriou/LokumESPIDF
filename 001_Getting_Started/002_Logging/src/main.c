@@ -38,7 +38,8 @@ void app_main(void)
   vTaskDelay(2000 / portTICK_PERIOD_MS); // 1s    
 
   // The function esp_log_level_set() cannot set logging levels higher than specified by CONFIG_LOG_DEFAULT_LEVEL. 
-  esp_log_level_set("LOG", ESP_LOG_INFO);
+  esp_log_level_set(TAG1, ESP_LOG_VERBOSE);
+
   vTaskDelay(500 / portTICK_PERIOD_MS); // 1s    
   ESP_LOGE(TAG1, "This is an error");
   vTaskDelay(500 / portTICK_PERIOD_MS); // 1s    
@@ -51,7 +52,7 @@ void app_main(void)
   ESP_LOGV(TAG1, "This is Verbose");
 
   int number = 0;
-    vTaskDelay(500 / portTICK_PERIOD_MS); // 1s    
+  vTaskDelay(500 / portTICK_PERIOD_MS); // 1s    
 
   ESP_LOGE(TAG2, "This is an error %d", number++);
   vTaskDelay(500 / portTICK_PERIOD_MS); // 1s    
