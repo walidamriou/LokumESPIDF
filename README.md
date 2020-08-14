@@ -1,6 +1,19 @@
 # LokumESPIDF
 To Learn using ESP-IDF (Espressif IoT Development Framework) to programming ESP32 boards with small programs examples
 
+### Notes
+#### Tools used:
+- __Platformio__ (https://platformio.org)
+- __VScode__ (https://code.visualstudio.com)
+- __ESP-IDF__ (https://docs.espressif.com/projects/esp-idf/en/stable/get-started/) 
+
+#### Development notes
+- If you start a new Platformio project, use:
+```bash
+# put this line in platformio.ini :
+monitor_speed = 115200 
+```
+
 ### If you need any help or information:
 :large_blue_circle:	 Facebook: https://www.facebook.com/walidamriou   
 :large_blue_circle:  Twitter: https://twitter.com/walidamriou    
