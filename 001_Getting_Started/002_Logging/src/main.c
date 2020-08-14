@@ -19,7 +19,21 @@
 // The function esp_log_level_set() can be used to set a logging level on a per module basis. Modules are 
 // identified by their tags, which are human-readable ASCII zero-terminated strings.
 
-// In this example, I jave used the second (At runtime).
+/* 
+In this example, I jave used the second (At runtime).
+in this example, We use all verbosity levels so we need to change in CONFIG_LOG_DEFAULT_LEVEL in 
+"sdkconfig" file, to VERBOSE level, so edit some lines like that: 
+...
+# CONFIG_LOG_DEFAULT_LEVEL_NONE is not set
+# CONFIG_LOG_DEFAULT_LEVEL_ERROR is not set
+# CONFIG_LOG_DEFAULT_LEVEL_WARN is not set
+# CONFIG_LOG_DEFAULT_LEVEL_INFO is not set
+# CONFIG_LOG_DEFAULT_LEVEL_DEBUG is not set
+CONFIG_LOG_DEFAULT_LEVEL_VERBOSE=y
+CONFIG_LOG_DEFAULT_LEVEL=5
+...
+
+*/
 
 #include <stdio.h>
 #include "esp_log.h"
@@ -30,41 +44,28 @@
 // Error (lowest), Warning, Info, Debug and Verbose (highest)
 
 // In each C file that uses logging functionality, we need to define the TAG variable
-static const char* TAG1 = "LOG1";
+// example: (1194) LOG2: This is Verbose ; TAG help use to see wich code part we get LOG
+// We can say that tag like a label of a log
+static const char* TAG1 = "LOG1"; 
 static const char* TAG2 = "LOG2";
 
 void app_main(void)
 {
-  vTaskDelay(2000 / portTICK_PERIOD_MS); // 1s    
-
   // The function esp_log_level_set() cannot set logging levels higher than specified by CONFIG_LOG_DEFAULT_LEVEL. 
-  esp_log_level_set(TAG1, ESP_LOG_VERBOSE);
+  esp_log_level_set(TAG1, ESP_LOG_VERBOSE); // this effect TAG1 and TAG2
 
-  vTaskDelay(500 / portTICK_PERIOD_MS); // 1s    
-  ESP_LOGE(TAG1, "This is an error");
-  vTaskDelay(500 / portTICK_PERIOD_MS); // 1s    
-  ESP_LOGW(TAG1, "This is a warning");
-  vTaskDelay(500 / portTICK_PERIOD_MS); // 1s    
-  ESP_LOGI(TAG1, "This is an info");
-  vTaskDelay(500 / portTICK_PERIOD_MS); // 1s    
-  ESP_LOGD(TAG1, "This is a Debug");
-  vTaskDelay(500 / portTICK_PERIOD_MS); // 1s    
-  ESP_LOGV(TAG1, "This is Verbose");
+  ESP_LOGE(TAG1, "This is an error log");
+  ESP_LOGW(TAG1, "This is a warning log");
+  ESP_LOGI(TAG1, "This is an info log");
+  ESP_LOGD(TAG1, "This is a Debug log");
+  ESP_LOGV(TAG1, "This is Verbose log");
+  
+  // We can print/log numbers with ESP log's
+  int i = 0;
 
-  int number = 0;
-  vTaskDelay(500 / portTICK_PERIOD_MS); // 1s    
-
-  ESP_LOGE(TAG2, "This is an error %d", number++);
-  vTaskDelay(500 / portTICK_PERIOD_MS); // 1s    
-
-  ESP_LOGW(TAG2, "This is a warning %d", number++);
-  vTaskDelay(500 / portTICK_PERIOD_MS); // 1s    
-
-  ESP_LOGI(TAG2, "This is an info %d", number++);
-  vTaskDelay(500 / portTICK_PERIOD_MS); // 1s    
-
-  ESP_LOGD(TAG2, "This is a Debug %d", number++);
-  vTaskDelay(500 / portTICK_PERIOD_MS); // 1s    
-
-  ESP_LOGV(TAG2, "This is Verbose %d", number++);
+  ESP_LOGE(TAG2, "This is an error %d log", i++);
+  ESP_LOGW(TAG2, "This is a warning %d log", i++);
+  ESP_LOGI(TAG2, "This is an info %d log", i++);
+  ESP_LOGD(TAG2, "This is a Debug %d log", i++);
+  ESP_LOGV(TAG2, "This is Verbose %d log", i++);
 }
