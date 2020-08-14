@@ -1,4 +1,4 @@
-In you start new project and want to copy the main.c only, in "sdkconfig" file, edit it some lines like that: 
+If you start a new project and want to copy the main.c only, in "sdkconfig" file, edit it some lines like that:
 
 ```bash
 ...
@@ -11,3 +11,4 @@ CONFIG_LOG_DEFAULT_LEVEL_VERBOSE=y
 CONFIG_LOG_DEFAULT_LEVEL=5
 ...
 ```
+This edit to use all verbosity levels.
