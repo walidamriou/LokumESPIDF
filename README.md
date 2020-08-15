@@ -10,7 +10,7 @@ This mark :heavy_check_mark: mean the example is available.
 - 001 Blinking the LED :heavy_check_mark:	    
 - 002 Logging :heavy_check_mark:  
 - 003 Blinking the LED with Logging info :heavy_check_mark:  
-- 004 Miscellaneous System api
+- 004 Miscellaneous System api :heavy_check_mark: 
 * __002 The most important of C programming__
 - 001 Basic
 - 002 Structure
