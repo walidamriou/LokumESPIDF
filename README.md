@@ -6,7 +6,7 @@ To Learn using ESP-IDF (Espressif IoT Development Framework) to programming ESP3
 - __Platformio__ (https://platformio.org)
 - __VScode__ (https://code.visualstudio.com)
 - __ESP-IDF__ (https://docs.espressif.com/projects/esp-idf/en/stable/get-started/) 
-- __M5StickC__ you can use a other dev board:    
+- __M5StickC__ , but you can use other dev board:    
    - For the Detailed documentation of M5StickC, please click [here](https://docs.m5stack.com/#/en/core/m5stickc)
    - In order to buy M5StickC, please click [here](https://www.aliexpress.com/item/New-Arrival-2019-M5StickC-1-of-Limited-Trial-Edition-ESP32-PICO-Mini-IoT-Development-Board-Finger/32985247364.html)
    - Description: <mark>**M5StickC**</mark> is a ESP32 development board with 0.96 inch **TFT color screen** (80 * 160 resolution), **Red LED**, button, **Microphone**, IR transmitter, 6-axis IMU (SH200Q) and 80 mAH battery. The ESP32 module **[ESP32-Pico](https://github.com/m5stack/M5-Schematic/blob/master/Core/esp32-pico-d4_datasheet_en.pdf)** in M5StickC also has a built-in 4MB flash. If the M5StickC is equipped with watch-base and watch-belt, you can wear it on your wrist.
