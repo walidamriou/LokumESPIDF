@@ -1,6 +1,16 @@
 # LokumESPIDF
 To Learn using ESP-IDF (Espressif IoT Development Framework) to programming ESP32 boards with small programs examples
 
+### Examples: 
+This mark :heavy_check_mark: mean the example is available.  
+:warning: If there are any issues in the scripts of the examples write an issue in: [issues](https://github.com/walidamriou/LokumESPIDF/issues "issues")   
+
+#### Contents of the examples:
+* __001 Getting Started__  
+- 001 Blinking the LED :heavy_check_mark:	    
+- 002 Logging :heavy_check_mark:  
+- 003 Blinking the LED with Logging info :heavy_check_mark:  
+- 004 Miscellaneous System api
 ### Notes
 #### Tools used:
 - __Platformio__ (https://platformio.org)
