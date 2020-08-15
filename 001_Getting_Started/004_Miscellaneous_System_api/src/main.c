@@ -27,6 +27,8 @@ void app_main() {
     esp_chip_info_t chip_info;
     esp_chip_info(&chip_info);
     int cores = chip_info.cores;
+    printf("chip_info.features %d \n",chip_info.features);
+    printf("CHIP_FEATURE_BT %ld \n",CHIP_FEATURE_BT);
     char text[] = ""; 
     char bluetooth_text[]="/Bluetooth";
     char ble_text[]="/BLE";
