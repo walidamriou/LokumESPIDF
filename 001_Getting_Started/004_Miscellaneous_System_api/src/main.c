@@ -26,21 +26,20 @@ void app_main() {
     
     esp_chip_info_t chip_info;
     esp_chip_info(&chip_info);
+    
     int cores = chip_info.cores;
-    printf("chip_info.features %d \n",chip_info.features);
-    printf("CHIP_FEATURE_BT %ld \n",CHIP_FEATURE_BT);
+
     char text[] = ""; 
     char bluetooth_text[]="/Bluetooth";
     char ble_text[]="/BLE";
-
-    if(true) {
+    int a = (chip_info.features & CHIP_FEATURE_BT);
+    int b = (chip_info.features & CHIP_FEATURE_BLE);
+    if(a==32) {
         strcat(text,&bluetooth_text);
     }
-    if(true){
+    if(b==16){
         strcat(text,&ble_text);
     } 
-
-
     printf("This is ESP32 chip with %d CPU cores, WiFi%s \n",cores,text);
 
     printf("silicon revision %d, \n", chip_info.revision);
