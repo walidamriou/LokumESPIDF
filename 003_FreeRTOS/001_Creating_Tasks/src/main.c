@@ -46,6 +46,5 @@ void app_main() {
 
     xTaskCreate(&task_1,"Task 1",2048,NULL,1,NULL);
     xTaskCreate(&task_2,"Task 2",2048,NULL,1,NULL);
-    //vTaskStartScheduler();
 
 }
