@@ -70,8 +70,11 @@ void app_main() {
                 NULL // We aren't using the task handle 
                );
     xTaskCreate(&task_2,"Task 2",2048,NULL,2,NULL);
+
+    // the task3 will be the first task pass, because it has the highest priority
     xTaskCreate(&task_3,"Task 3",2048,NULL,3,NULL);
 
+    
     // If you use FreeRTOS with other board (STM32) you will call vTaskStartScheduler() here,
     // but don't call it with ESP32, because this function is called before app_main starts. 
     // In fact, app_main runs within a FreeRTOS task already!
