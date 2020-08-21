@@ -69,6 +69,9 @@ void app_main() {
                 1, // priority 1
                 NULL // We aren't using the task handle 
                );
+    // Each task is assigned a priority from 0 to (configMAX_PRIORITIES – 1 ), 
+    // (configMAX_PRIORITIES is defined  in FreeRTOSConfig.h).
+
     xTaskCreate(&task_2,"Task 2",2048,NULL,2,NULL);
 
     // the task3 will be the first task pass, because it has the highest priority
