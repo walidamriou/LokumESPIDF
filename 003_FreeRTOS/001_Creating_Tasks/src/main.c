@@ -30,6 +30,10 @@ while (true){
     // 3000 / portTICK_PERIOD_MS = 300 ticks
     // 300 * 10ms = 3s
     vTaskDelay(3000 / portTICK_PERIOD_MS);  
+
+    // What does vTaskDelay() realy do ?
+    // It place the task in Blocked state for a fixed number of tick interrupts, after that
+    // move the task to the ready state and after that be able to running state. 
 }
 }
 
