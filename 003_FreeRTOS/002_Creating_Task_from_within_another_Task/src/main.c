@@ -19,10 +19,12 @@
 
 static const char* TAG1 = "LOG1"; 
 
+// if you don't defin the task_2 function here, you will can't create it within task_1 function
 void task_2(void *params);
 
 // The function of Task 1 
 void task_1(void *params){
+    // Create task 2 within task 1 
     xTaskCreate(&task_2,"Task 2",2048,NULL,1,NULL);
     
     // most tasks are implemented in an infinite loop
