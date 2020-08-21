@@ -19,32 +19,49 @@
 
 static const char* TAG1 = "LOG1"; 
 
+// The function of Task 1 
 void task_1(void *params){
-//const char *Task_output_1 = "Task 1";
-
+// most tasks are implemented in an infinite loop
 while (true){
-    //printf(Task_output_1);
+    // we use logging info to see the task text
     ESP_LOGI(TAG1, "Task 1");
+    // delay of 3s to print the next text
+    // portTICK_PERIOD_MS = 10
+    // 3000 / portTICK_PERIOD_MS = 300 ticks
+    // 300 * 10ms = 3s
     vTaskDelay(3000 / portTICK_PERIOD_MS);  
 }
 }
 
+// The function of Task 2
 void task_2(void *params){
-//const char *Task_output_2 = "Task 2";
-
+// most tasks are implemented in an infinite loop
 while (true){
-    //printf(Task_output_2);
+    // we use logging info to see the task text
     ESP_LOGI(TAG1,"Task 2");
+    // delay of 3s to print the next text
     vTaskDelay(3000 / portTICK_PERIOD_MS);  
 }
 }
 
 void app_main() {
+    // wait 3 s 
     vTaskDelay(3000 / portTICK_PERIOD_MS);  
-
+    // for logging 
     esp_log_level_set(TAG1, ESP_LOG_VERBOSE); 
-
-    xTaskCreate(&task_1,"Task 1",2048,NULL,1,NULL);
+    // Create Tasks
+    // xTaskCreate() should return "pdTRUE" to indicate that the task was created successfully 
+    xTaskCreate(&task_1, // pointer to the task function
+                "Task 1", // text name for debugging only
+                2048, // Stack depth 
+                NULL, // We aren't using task parameter here, but in general use it to pass parameters from main to the task function
+                1, // priority 1
+                NULL // We aren't using the task handle 
+               );
     xTaskCreate(&task_2,"Task 2",2048,NULL,1,NULL);
+
+    // If you use FreeRTOS with other board (STM32) you will call vTaskStartScheduler() here,
+    // but don't call it with ESP32, because this function is called before app_main starts. 
+    // In fact, app_main runs within a FreeRTOS task already!
 
 }
