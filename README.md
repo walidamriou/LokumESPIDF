@@ -18,6 +18,7 @@ This mark :heavy_check_mark: mean the example is available.
 - 001 Creating Tasks :heavy_check_mark:
 - 002 Creating Task From within another task :heavy_check_mark:
 - 003 Passing parameters to create Task function :heavy_check_mark:
+- 004 Creating Tasks with different priorities :heavy_check_mark:
 * __004 Storage__
 - ...
 * __005 GPIO__  
