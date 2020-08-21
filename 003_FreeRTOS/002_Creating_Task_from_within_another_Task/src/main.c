@@ -19,7 +19,7 @@
 
 static const char* TAG1 = "LOG1"; 
 
-// if you don't defin the task_2 function here, you will can't create it within task_1 function
+// if you don't define the task_2 function here, you will can't create it within task_1 function
 void task_2(void *params);
 
 // The function of Task 1 
