@@ -12,25 +12,31 @@ This mark :heavy_check_mark: mean the example is available.
 - 003 Blinking the LED with Logging info :heavy_check_mark:  
 - 004 Miscellaneous System api :heavy_check_mark: 
 - 005 Implement restart button
-* __002 The most important of C programming__
-- ...
-* __003 FreeRTOS__  
+* __002 FreeRTOS__  
 - 001 Creating Tasks :heavy_check_mark:
 - 002 Creating Task From within another task :heavy_check_mark:
 - 003 Passing parameters to create Task function :heavy_check_mark:
 - 004 Creating Tasks with different priorities :heavy_check_mark:
-* __004 Storage__
+* __003 Storage__
 - ...
-* __005 GPIO__  
+* __004 GPIO__  
 - ...
-* __006 I2C__  
+* __005 I2C__  
 - ...
-* __007 SPI__  
+* __006 SPI__  
 - ...
-* __008 WiFi__
+* __007 WiFi__
 - ...
-* __009 Web__
+* __008 Web__
 - ...
+* __009 REST API__
+- 001 Receive GET request with query params
+- 002 Receive POST request with body content
+- 003 Receive GET request and return json results
+- 004 GET request headers
+- 005 Return response with headers
+- 006 Return simple status in response (200,404)
+- 007 Receive multi part request
 * __010 Bluetooth and BLE__
 - ...
 * __011 MQTT__
