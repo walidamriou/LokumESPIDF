@@ -30,7 +30,7 @@ This mark :heavy_check_mark: mean the example is available.
 * __008 Web__
 - ...
 * __009 REST API__
-- 001 Receive GET request with query params
+- 001 Receive GET request with query params :heavy_check_mark:
 - 002 Receive POST request with body content
 - 003 Receive GET request and return json results
 - 004 GET request headers
