@@ -50,7 +50,7 @@ This mark :heavy_check_mark: mean the example is available.
 * __015 Display and TFT__
 - ...
 * __016 Sensors__
-- 001 Generate one pulse by RMT
+- 001 Generate one pulse by RMT (of 1ms mark and 1ms space)
 
 
 ### Notes
